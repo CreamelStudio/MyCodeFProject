@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -10,6 +11,18 @@ public class MenuManager : MonoBehaviour
     public GameObject[] setHighLight;
 
     public GameObject settings;
+
+    public float deltatime;
+
+    public Text fps;
+
+    private void Start()
+    {
+        settings.SetActive(false);
+
+
+    }
+
 
     public void HighLightB(int number)
     {
@@ -60,16 +73,18 @@ public class MenuManager : MonoBehaviour
         }
     }
 
-    public void SetClickButton(int ButtonNumber)
+    private void Update()
     {
-        switch (ButtonNumber)
-        {
-            case 0: Debug.Log("Sounds"); break;
-            case 1: Debug.Log("Graphics"); break;
-            case 2: Debug.Log("Control"); break;
-            case 3: Debug.Log("System"); break;
-            case 4: Debug.Log("Data"); break;
-            case 5: Debug.Log("Save&Exit"); settings.SetActive(false); break;
-        }
+        if (Input.GetKeyDown(KeyCode.P)) fps.gameObject.SetActive(!fps.gameObject.activeSelf);
+        fps.text = "FPS\n" + OutputFPS().ToString();
+
+    }
+
+    float OutputFPS()
+    {
+        deltatime += (Time.deltaTime - deltatime) * 0.1f;
+        float fps = 1.0f / deltatime;
+
+        return fps;
     }
 }
