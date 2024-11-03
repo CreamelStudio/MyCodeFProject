@@ -1,7 +1,9 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
@@ -15,6 +17,13 @@ public class MenuManager : MonoBehaviour
     public float deltatime;
 
     public Text fps;
+
+    public GameObject transitionObj;
+
+    public CanvasGroup canvasG;
+
+    public AudioSource bgA;
+    public AudioSource breezeclipA;
 
     private void Start()
     {
@@ -64,7 +73,7 @@ public class MenuManager : MonoBehaviour
     {
         switch (ButtonNumber)
         {
-            case 0: Debug.Log("New Game"); break;
+            case 0: Debug.Log("New Game"); transitionObj.SetActive(true); Invoke("NextScene",6); canvasG.DOFade(0, 1); bgA.DOFade(0, 0.8f); breezeclipA.DOFade(0, 0.8f); break;
             case 1: Debug.Log("Continue"); break;
             case 2: Debug.Log("Setting"); settings.SetActive(true); break;
             case 3: Debug.Log("Gallery"); break;
@@ -86,5 +95,12 @@ public class MenuManager : MonoBehaviour
         float fps = 1.0f / deltatime;
 
         return fps;
+    }
+
+    public void NextScene()
+    {
+
+        SceneManager.LoadScene("Act1");
+
     }
 }
