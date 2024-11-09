@@ -124,7 +124,7 @@ Material:
     - _EdgeSize: 0.075
     - _Fresnel: 3
     - _GlossMapScale: 1
-    - _Glossiness: 0.769
+    - _Glossiness: 0
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
@@ -155,7 +155,6 @@ Material:
     - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
     - _NoiseTiling: {r: 1.5, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
-  m_AllowLocking: 1
 --- !u!114 &1475297752998695501
 MonoBehaviour:
   m_ObjectHideFlags: 11

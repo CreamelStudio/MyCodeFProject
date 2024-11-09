@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class ControlSwitch : MonoBehaviour {
 
@@ -12,18 +14,10 @@ public class ControlSwitch : MonoBehaviour {
 
 	void Awake()
 	{
-		Application.targetFrameRate = 60;
 		useAutomaticControl = HasCommandLineArgument (automaticControlDefaultCMDLineArgument);
-		SetControllerState (true);
+		SetControllerState (false);
 	}
-
-	void Update()
-	{
-		if (Input.GetKeyDown (toggleKey)) {
-			Toggle ();
-		}
-	}
-
+	
 	void Toggle()
 	{
 		useAutomaticControl = !useAutomaticControl;

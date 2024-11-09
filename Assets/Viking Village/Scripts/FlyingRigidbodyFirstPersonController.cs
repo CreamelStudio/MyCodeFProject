@@ -23,18 +23,6 @@ public class FlyingRigidbodyFirstPersonController : MonoBehaviour {
 
 	void Update ()
 	{
-		if (AscendKeyDoubleHit())
-		{
-			flying = !flying;
-			rigidbody.useGravity = !flying;
-			rigidbodyFPC.enabled = !flying;
-			headBob.enabled = !flying;
-
-			if (flying)
-			{
-				rigidbody.drag = flyingDrag;
-			}
-		}
 		 
 		if (flying)
 		{
