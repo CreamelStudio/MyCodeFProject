@@ -14,29 +14,73 @@ public class Player : MonoBehaviour
 
     private Rigidbody playerRb;
 
+    [SerializeField]
+    private bool isCanMove;
+
+
+    [Header("Rotate")]
+    public float mouseSpeed;
+    float yRotation;
+    float xRotation;
+    UnityEngine.Camera cam;
+
+    public GameObject transition;
+
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        cam = UnityEngine.Camera.main;
         playerRb = GetComponent<Rigidbody>();
+
+        playerRb.freezeRotation = true;
+        StartCoroutine(Co_TransitionOff());
     }
 
     private void Update()
     {
-        
+        CamMove();
+    }
+
+    private void FixedUpdate()
+    {
+        if (isCanMove)
+        {
+            Move();
+        }
+    }
+
+    public void SwitchCanMove()
+    {
+        isCanMove = !isCanMove;
     }
 
     private void Move()
     {
         float v = Input.GetAxisRaw("Vertical");
         float h = Input.GetAxisRaw("Horizontal");
-
-        playerRb.velocity = new Vector3(h * Time.deltaTime * playerMoveSpeed, 0, v * Time.deltaTime * playerMoveSpeed).normalized;
+        Vector3 moveDir = (transform.forward * v + transform.right * h).normalized * playerMoveSpeed;
+        playerRb.velocity = moveDir;
     }
 
-    private void Jump()
+    private void CamMove()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            playerRb.AddForce(Vector3.up * playerJumpForce, ForceMode.Impulse);
-        }
+        float mouseX = Input.GetAxisRaw("Mouse X") * mouseSpeed * Time.deltaTime;
+        float mouseY = Input.GetAxisRaw("Mouse Y") * mouseSpeed * Time.deltaTime;
+
+        yRotation += mouseX;
+        xRotation -= mouseY;
+
+        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+        cam.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
+        transform.rotation = Quaternion.Euler(0, yRotation, 0); 
+    }
+
+    IEnumerator Co_TransitionOff()
+    {
+        yield return new WaitForSeconds(9);
+        transition.SetActive(false);
     }
 }

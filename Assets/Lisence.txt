@@ -1,0 +1,38 @@
+Map
+Viking Village / AssetStore
+
+Music
+Free Fantasy Adventure Music Pack / AssetStore
+Nature - Essentials / AssetStore
+Rain Forest SFX / AssetStore
+Base Drum Impact / https://www.youtube.com/watch?v=s-H0RlBc46U
+
+Blink Tick Sounds / 직접녹음
+
+75_누락된 총알 / 공유마당
+E0153_Sorrow_Sleep alone_Piano Violin_T55 / 공유마당
+Green Sleeves[정인영] / 공유마당
+SE_08_04_앙칼진 바이올린 효과음 / 공유마당
+강지희_Uncharted / 공유마당
+오늘 난 너에게 / 공유마당
+이호석_Longing(그리움) / 공유마당
+홍빈_막장드라마 / 공유마당
+
+Animation
+Adobe Mixamo
+
+SkyBox
+FreeNightSky / AssetStore
+
+Shader
+Unity Technologies Particle Pack / AssetStore
+
+Texture / UI
+Title Scene / 자체제작
+Title Highligh / 자체제작
+
+https://kenney.nl/assets 
+https://sketchfab.com/feed
+https://assetstore.unity.com/ko-KR
+https://www.mixamo.com/#/
+https://gongu.copyright.or.kr/gongu/main/main.do
