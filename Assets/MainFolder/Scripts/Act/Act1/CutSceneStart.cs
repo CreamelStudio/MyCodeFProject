@@ -8,6 +8,9 @@ public class CutSceneStart : MonoBehaviour
 {
     public GameObject fireMove;
     public GameObject chat;
+
+    public GameObject fadein;
+
     public Text chatText;
 
     public GameObject blickBlack;
@@ -26,7 +29,7 @@ public class CutSceneStart : MonoBehaviour
             isStartCutScene = true;
             chat.SetActive(true);
             chatText.DOText("What's wrong?", 1);
-            fireMove.transform.DOMoveX(-60, 15f).SetEase(Ease.InQuart);
+            fireMove.transform.DOMoveX(-75, 15f).SetEase(Ease.InQuart);
             StartCoroutine(Co_ToNextScene());
             violin.Play();
         }
@@ -38,6 +41,8 @@ public class CutSceneStart : MonoBehaviour
         yield return new WaitForSeconds(blinkCool);
         chatText.DOText("what the .......", 3);
         blickBlack.SetActive(true);
+        yield return new WaitForSeconds(3); 
+        fadein.GetComponent<RawImage>().DOFade(1, 3);
         for (int i = 0; i < blinkCount; i++)
         {
             yield return new WaitForSeconds(blinkCool);

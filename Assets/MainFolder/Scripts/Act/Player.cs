@@ -12,6 +12,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float playerJumpForce;
 
+    [SerializeField]
+    private float playerRunSpeed;
+
     private Rigidbody playerRb;
 
     [SerializeField]
@@ -60,8 +63,17 @@ public class Player : MonoBehaviour
     {
         float v = Input.GetAxisRaw("Vertical");
         float h = Input.GetAxisRaw("Horizontal");
-        Vector3 moveDir = (transform.forward * v + transform.right * h).normalized * playerMoveSpeed;
-        playerRb.velocity = moveDir;
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            Vector3 moveDir = (transform.forward * v + transform.right * h).normalized * playerRunSpeed;
+            playerRb.velocity = moveDir;
+        }
+        else
+        {
+            Vector3 moveDir = (transform.forward * v + transform.right * h).normalized * playerMoveSpeed;
+            playerRb.velocity = moveDir;
+        }
+        
     }
 
     private void CamMove()
