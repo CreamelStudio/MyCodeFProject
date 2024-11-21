@@ -18,7 +18,8 @@ public class CutSceneStart : MonoBehaviour
     public float blinkCool;
     public float startCool;
 
-    public AudioSource violin;
+    public AudioSource mainAudio;
+    public AudioClip fastBgm;
 
     public bool isStartCutScene;
 
@@ -31,7 +32,8 @@ public class CutSceneStart : MonoBehaviour
             chatText.DOText("What's wrong?", 1);
             fireMove.transform.DOMoveX(-75, 15f).SetEase(Ease.InQuart);
             StartCoroutine(Co_ToNextScene());
-            violin.Play();
+            mainAudio.clip = fastBgm;
+            mainAudio.Play();
         }
     }
 

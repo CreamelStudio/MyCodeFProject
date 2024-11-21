@@ -40,9 +40,9 @@ public class BlinkUI : MonoBehaviour
         audioSource.Play();
         for (int i=0;i< blinkCount; i++)
         {
-            yield return new WaitForSeconds(blinkCool);
+            yield return new WaitForSeconds(blinkCool - i / 1000);
             blickBlack.SetActive(false);
-            yield return new WaitForSeconds(blinkCool);
+            yield return new WaitForSeconds(blinkCool - i / 1000);
             blickBlack.SetActive(true);
         }
 

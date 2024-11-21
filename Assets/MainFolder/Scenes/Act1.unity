@@ -3357,6 +3357,44 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 84634507}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &86332327
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WaterDepthMap
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_ForcedFallbackFormat: 4
+  m_DownscaleFallback: 0
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 5
+  m_Width: 1024
+  m_Height: 1024
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 94
+  m_ColorFormat: 0
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 0
+  m_UseDynamicScale: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!4 &86809596 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400002, guid: 3ccf2bc3f937d3649a1d2b0aeb03ba51,
@@ -10573,44 +10611,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dbf7e32b433b4b4f9ca4247821b0872, type: 3}
---- !u!84 &294079546
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: WaterDepthMap
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_ForcedFallbackFormat: 4
-  m_DownscaleFallback: 0
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 5
-  m_Width: 1024
-  m_Height: 1024
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 94
-  m_ColorFormat: 0
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 0
-  m_UseDynamicScale: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1 &296488275
 GameObject:
   m_ObjectHideFlags: 0
@@ -62400,7 +62400,8 @@ MonoBehaviour:
   blinkCount: 40
   blinkCool: 0.04
   startCool: 12
-  violin: {fileID: 0}
+  mainAudio: {fileID: 1098382871}
+  fastBgm: {fileID: 8300000, guid: 08c7df570b7844170ad516208bd4a5be, type: 3}
   isStartCutScene: 0
 --- !u!1001 &1540446076
 PrefabInstance:
@@ -63907,10 +63908,10 @@ MonoBehaviour:
   riser: {fileID: 8300000, guid: 70a99472740ebbd4aafab307b1e142a8, type: 3}
   bassClip: {fileID: 8300000, guid: 98dd2c73576de564883eb45f0aaebac7, type: 3}
   bgm: {fileID: 8300000, guid: f47b96739504bc84d94c2c9c81897964, type: 3}
-  blinkCool: 0.04
+  blinkCool: 0.06
   startOffset: 4
-  bassOffset: 5.5
-  blinkCount: 50
+  bassOffset: 6
+  blinkCount: 40
   audioSource: {fileID: 1098382871}
 --- !u!1001 &1571942497
 PrefabInstance:
