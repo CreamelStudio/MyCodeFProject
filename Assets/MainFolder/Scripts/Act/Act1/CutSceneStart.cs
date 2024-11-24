@@ -32,19 +32,24 @@ public class CutSceneStart : MonoBehaviour
             chatText.DOText("What's wrong?", 1);
             fireMove.transform.DOMoveX(-75, 15f).SetEase(Ease.InQuart);
             StartCoroutine(Co_ToNextScene());
-            mainAudio.clip = fastBgm;
-            mainAudio.Play();
+            
         }
     }
 
     IEnumerator Co_ToNextScene()
     {
-        yield return new WaitForSeconds(startCool);
+        yield return new WaitForSeconds(startCool - 2);
+        mainAudio.DOFade(0, 1f);
+        yield return new WaitForSeconds(1);
+        mainAudio.clip = fastBgm;
+        mainAudio.Play();
+        mainAudio.DOFade(1, 1f);
         yield return new WaitForSeconds(blinkCool);
+        chatText.text = "";
         chatText.DOText("what the .......", 3);
         blickBlack.SetActive(true);
         yield return new WaitForSeconds(3); 
-        fadein.GetComponent<RawImage>().DOFade(1, 3);
+        fadein.GetComponent<RawImage>().DOFade(1, 6);
         for (int i = 0; i < blinkCount; i++)
         {
             yield return new WaitForSeconds(blinkCool);
