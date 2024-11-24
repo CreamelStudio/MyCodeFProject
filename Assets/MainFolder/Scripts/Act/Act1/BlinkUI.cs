@@ -19,9 +19,12 @@ public class BlinkUI : MonoBehaviour
     public float bassOffset;
     public int blinkCount;
 
-    public AudioSource audioSource;
+    public GameObject questUI;
 
-    public 
+    public AudioSource audioSource;
+    public AudioSource subSource;
+
+    public
 
     void Start()
     {
@@ -49,15 +52,22 @@ public class BlinkUI : MonoBehaviour
         audioSource.clip = bassClip;
         audioSource.Play();
         title.SetActive(true);
-        yield return new WaitForSeconds(bassOffset);
+        yield return new WaitForSeconds(bassOffset - 2);
         
+
         blickBlack.GetComponent<RawImage>().DOFade(0, 4);
         title.GetComponent<RawImage>().DOFade(0, 4);
-        yield return new WaitForSeconds(bassOffset);
-        player.SwitchCanMove();
+        yield return new WaitForSeconds(bassOffset - 1);
+        audioSource.DOFade(0, 1f);
+        yield return new WaitForSeconds(1);
         audioSource.volume = 0.12f;
         audioSource.loop = true;
         audioSource.clip = bgm;
         audioSource.Play();
+        audioSource.DOFade(1, 1f);
+        player.SwitchCanMove();
+        yield return new WaitForSeconds(0.5f);
+        questUI.SetActive(true);
+        subSource.Play();
     }
 }

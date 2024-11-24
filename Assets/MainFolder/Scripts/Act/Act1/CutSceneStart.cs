@@ -38,12 +38,13 @@ public class CutSceneStart : MonoBehaviour
 
     IEnumerator Co_ToNextScene()
     {
-        yield return new WaitForSeconds(startCool - 2);
         mainAudio.DOFade(0, 1f);
+
         yield return new WaitForSeconds(1);
         mainAudio.clip = fastBgm;
         mainAudio.Play();
         mainAudio.DOFade(1, 1f);
+        yield return new WaitForSeconds(startCool - 2);
         yield return new WaitForSeconds(blinkCool);
         chatText.text = "";
         chatText.DOText("what the .......", 3);
@@ -52,11 +53,12 @@ public class CutSceneStart : MonoBehaviour
         fadein.GetComponent<RawImage>().DOFade(1, 6);
         for (int i = 0; i < blinkCount; i++)
         {
-            yield return new WaitForSeconds(blinkCool);
+            yield return new WaitForSeconds(blinkCool - i * 1200);
             blickBlack.SetActive(false);
-            yield return new WaitForSeconds(blinkCool);
+            yield return new WaitForSeconds(blinkCool - i * 1200);
             blickBlack.SetActive(true);
         }
-        SceneManager.LoadScene("Act2");
+        mainAudio.DOFade(0, 0.5f);
+        SceneManager.LoadScene("Act1-2");
     }
 }
