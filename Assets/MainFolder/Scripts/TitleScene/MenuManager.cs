@@ -25,11 +25,12 @@ public class MenuManager : MonoBehaviour
     public AudioSource bgA;
     public AudioSource breezeclipA;
 
+    public RawImage coverFade;
+
     private void Start()
     {
         settings.SetActive(false);
-
-
+        coverFade.DOFade(0, 0.8f);
     }
 
 

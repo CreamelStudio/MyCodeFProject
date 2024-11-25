@@ -18,8 +18,13 @@ public class CutSceneStart : MonoBehaviour
     public float blinkCool;
     public float startCool;
 
+    public GameObject cutSceneCamera;
+    public GameObject mainCamera;
+
     public AudioSource mainAudio;
     public AudioClip fastBgm;
+
+    public CanvasGroup cv;
 
     public bool isStartCutScene;
 
@@ -30,7 +35,7 @@ public class CutSceneStart : MonoBehaviour
             isStartCutScene = true;
             chat.SetActive(true);
             chatText.DOText("What's wrong?", 1);
-            fireMove.transform.DOMoveX(-75, 15f).SetEase(Ease.InQuart);
+            fireMove.transform.DOMoveX(-75, 16f).SetEase(Ease.InQuart);
             StartCoroutine(Co_ToNextScene());
             
         }
@@ -40,17 +45,26 @@ public class CutSceneStart : MonoBehaviour
     {
         mainAudio.DOFade(0, 1f);
 
-        yield return new WaitForSeconds(1);
+        cutSceneCamera.SetActive(true);
+        mainCamera.SetActive(false);
+        
+        yield return new WaitForSeconds(6.5f);
+        cutSceneCamera.SetActive(false);
+        mainCamera.SetActive(true);
         mainAudio.clip = fastBgm;
         mainAudio.Play();
         mainAudio.DOFade(1, 1f);
         yield return new WaitForSeconds(startCool - 2);
+        
         yield return new WaitForSeconds(blinkCool);
         chatText.text = "";
         chatText.DOText("what the .......", 3);
         blickBlack.SetActive(true);
-        yield return new WaitForSeconds(3); 
-        fadein.GetComponent<RawImage>().DOFade(1, 6);
+        fadein.GetComponent<RawImage>().DOFade(1, 3);
+        cv.DOFade(0, 2);
+        
+        yield return new WaitForSeconds(3);
+        mainAudio.DOFade(0, 1);
         for (int i = 0; i < blinkCount; i++)
         {
             yield return new WaitForSeconds(blinkCool - i * 1200);
@@ -59,6 +73,6 @@ public class CutSceneStart : MonoBehaviour
             blickBlack.SetActive(true);
         }
         mainAudio.DOFade(0, 0.5f);
-        SceneManager.LoadScene("Act1-2");
+        SceneManager.LoadScene("Credit");
     }
 }

@@ -24,7 +24,6 @@ public class BlinkUI : MonoBehaviour
     public AudioSource audioSource;
     public AudioSource subSource;
 
-    public
 
     void Start()
     {

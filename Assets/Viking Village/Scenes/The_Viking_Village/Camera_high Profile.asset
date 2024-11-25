@@ -15,7 +15,7 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: -1.97
+    m_Value: -0.81
   contrast:
     m_OverrideState: 1
     m_Value: 9
@@ -27,7 +27,7 @@ MonoBehaviour:
     m_Value: 0
   saturation:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -86.61
 --- !u!114 &-7465753169536601502
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -43,7 +43,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.142
+    m_Value: 0.299
 --- !u!114 &-6721687741527588655
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -221,10 +221,10 @@ MonoBehaviour:
   active: 1
   temperature:
     m_OverrideState: 1
-    m_Value: 15
+    m_Value: 94.84
   tint:
     m_OverrideState: 1
-    m_Value: 10
+    m_Value: 100
 --- !u!114 &7804920074520926876
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -262,7 +262,7 @@ MonoBehaviour:
   active: 1
   distance:
     m_OverrideState: 1
-    m_Value: 0.1
+    m_Value: 0.429
   cropToFit:
     m_OverrideState: 1
     m_Value: 1
