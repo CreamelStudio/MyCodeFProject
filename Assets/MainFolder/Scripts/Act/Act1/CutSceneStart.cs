@@ -73,6 +73,6 @@ public class CutSceneStart : MonoBehaviour
             blickBlack.SetActive(true);
         }
         mainAudio.DOFade(0, 0.5f);
-        SceneManager.LoadScene("Credit");
+        SceneManager.LoadScene("Act1-2");
     }
 }

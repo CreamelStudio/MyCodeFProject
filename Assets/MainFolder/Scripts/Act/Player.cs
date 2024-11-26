@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
-using Update = UnityEngine.PlayerLoop.Update;
-
+using UnityEngine.SceneManagement;
 public class Player : MonoBehaviour
 {
     [SerializeField]
@@ -43,7 +42,10 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        CamMove();
+        if (isCanMove || SceneManager.GetActiveScene().name == "Act1-1")
+        {
+            CamMove();
+        }
     }
 
     private void FixedUpdate()
