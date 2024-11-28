@@ -54,11 +54,12 @@ public class CutSceneStart : MonoBehaviour
         mainAudio.clip = fastBgm;
         mainAudio.Play();
         mainAudio.DOFade(1, 1f);
+        chatText.text = "";
+        chatText.DOText("Run!!", 3);
         yield return new WaitForSeconds(startCool - 2);
         
         yield return new WaitForSeconds(blinkCool);
-        chatText.text = "";
-        chatText.DOText("what the .......", 3);
+        
         blickBlack.SetActive(true);
         fadein.GetComponent<RawImage>().DOFade(1, 3);
         cv.DOFade(0, 2);

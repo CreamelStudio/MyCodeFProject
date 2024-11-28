@@ -19,6 +19,11 @@ public class Player : MonoBehaviour
     [SerializeField]
     private bool isCanMove;
 
+    [SerializeField]
+    private Vector3 playerRotationOffset;
+
+    [SerializeField]
+    private Vector3 camRotationOffset;
 
     [Header("Rotate")]
     public float mouseSpeed;
@@ -27,6 +32,8 @@ public class Player : MonoBehaviour
     UnityEngine.Camera cam;
 
     public GameObject transition;
+
+    public bool isToDown;
 
     private void Start()
     {
@@ -61,6 +68,11 @@ public class Player : MonoBehaviour
         isCanMove = !isCanMove;
     }
 
+    public void SwitchIsToDown()
+    {
+        isToDown = !isToDown;
+    }
+
     private void Move()
     {
         float v = Input.GetAxisRaw("Vertical");
@@ -70,9 +82,15 @@ public class Player : MonoBehaviour
             Vector3 moveDir = (transform.forward * v + transform.right * h).normalized * playerRunSpeed;
             playerRb.velocity = moveDir;
         }
-        else
+        else if(!isToDown)
         {
             Vector3 moveDir = (transform.forward * v + transform.right * h).normalized * playerMoveSpeed;
+            playerRb.velocity = moveDir;
+        }
+        else if (isToDown)
+        {
+            Vector3 moveDir = (transform.forward * v + transform.right * h).normalized * playerMoveSpeed;
+            moveDir.y = -28.9f;
             playerRb.velocity = moveDir;
         }
         
@@ -86,10 +104,10 @@ public class Player : MonoBehaviour
         yRotation += mouseX;
         xRotation -= mouseY;
 
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        
 
         cam.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
-        transform.rotation = Quaternion.Euler(0, yRotation, 0); 
+        transform.rotation = Quaternion.Euler(0, yRotation, 0);
     }
 
     IEnumerator Co_TransitionOff()

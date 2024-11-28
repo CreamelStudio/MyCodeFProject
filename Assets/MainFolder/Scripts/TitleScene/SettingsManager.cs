@@ -20,7 +20,7 @@ public class SettingsManager : MonoBehaviour
     private GameObject viewer;
 
     #region SetValue
-    [Header("¼³Á¤ Value")]
+    [Header("ï¿½ï¿½ï¿½ï¿½ Value")]
     [SerializeField]
     private Scrollbar masterVol;
     [SerializeField]
@@ -53,9 +53,23 @@ public class SettingsManager : MonoBehaviour
 
             SetFPS(0);
             SetPipe(2);
+
+            
         }
 
+        masterVol.value = PlayerPrefs.GetFloat("MasterVol");
+        musicVol.value = PlayerPrefs.GetFloat("MusicVol");
+        sfxVol.value = PlayerPrefs.GetFloat("SFXVol");
 
+        quality.value = PlayerPrefs.GetInt("Quality");
+        fps.value = PlayerPrefs.GetInt("FPS");
+
+        interectionKeyText.text = PlayerPrefs.GetString("InterectionKey");
+        InventoryKeyText.text = PlayerPrefs.GetString("InventoryKey");
+
+
+        SetPipe(quality.value);
+        SetFPS(fps.value);
     }
 
     public void SetKey(int value)
@@ -64,7 +78,7 @@ public class SettingsManager : MonoBehaviour
 
         if(value == 0)
         {
-            foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode))) //KeyCode ÀÇ ValueÁß kcode¿Í °°Àº°ÍÀ» °Ë»ö
+            foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode))) //KeyCode ï¿½ï¿½ Valueï¿½ï¿½ kcodeï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½
             {
                 if (Input.GetKeyDown(kcode))
                 {

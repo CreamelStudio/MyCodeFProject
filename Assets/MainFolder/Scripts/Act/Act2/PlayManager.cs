@@ -8,6 +8,8 @@ using TMPro;
 public class PlayManager : MonoBehaviour
 {
 
+    public GameObject player;
+
     public bool isKey;
     public bool isProg;
     public bool endProg;
@@ -26,9 +28,15 @@ public class PlayManager : MonoBehaviour
 
     public Tweener progressTwen;
 
+    public Text chat;
+
+    public GameObject tableDisable;
+    public GameObject floorDisable;
+
     private void Start()
     {
         fadeMat.color = new Color(1, 1, 1, 1);
+        StartCoroutine(chating());
     }
 
     void Update()
@@ -56,6 +64,7 @@ public class PlayManager : MonoBehaviour
             dessolveObj.SetActive(true);
             Invoke("DisableChip", 1);
             endProg = true;
+            chat.text = "";
         }
     }
 
@@ -69,11 +78,39 @@ public class PlayManager : MonoBehaviour
         disableOut.SetActive(false);
         des.text = "";
         des.DOText("hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahaha", 5f);
-        Invoke("ToCredit", 4);
+        Invoke("ToTrigger", 4);
     }
 
-    public void ToCredit()
+    public void ToTrigger()
     {
-        SceneManager.LoadScene("Credit");
+        player.GetComponent<Player>().SwitchCanMove();
+        player.GetComponent<Player>().SwitchIsToDown();
+        Camera.main.gameObject.GetComponent<CamShake>().enabled = false;
+        tableDisable.SetActive(false);
+        floorDisable.SetActive(false);
+    }
+
+    IEnumerator chating()
+    {
+        yield return new WaitForSeconds(1.2f);
+        chat.DOText("What happened...", 3f);
+        yield return new WaitForSeconds(3.7f);
+        chat.text = "";
+        chat.DOText("Oh, right. I was gambling.", 1.5f);
+
+        yield return new WaitForSeconds(2);
+        chat.text = "";
+        chat.DOText("Play More Gambling.", 1.5f);
+
+        while (!endProg)
+        {
+            
+            yield return new WaitForSeconds(20);
+            if (endProg) break;
+            chat.text = "";
+            chat.DOText("Play More!!!!!!", 1.5f);
+        }
+        
+
     }
 }
