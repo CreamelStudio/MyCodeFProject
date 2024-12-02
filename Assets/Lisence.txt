@@ -1,6 +1,10 @@
 Map
 Viking Village / AssetStore
 PBR Little Games Pack - 4K / AssetStore
+Dungeon Castle 3D Asset / CGtrader
+
+VFX
+Lightning Bolt Effect for Unity / AssetStore
 
 Music
 Free Fantasy Adventure Music Pack / AssetStore
@@ -18,9 +22,22 @@ SE_08_04_앙칼진 바이올린 효과음 / 공유마당
 Danse des adolescentes / KBS 오케스트라 악단
 LSMBG0602_긴박한 순간
 Strong Wind Sound Effect | Royalty Free Sound Effects / Youtube
+wrong-place-129242 / pixabay
+
+3D Objects
+Musical Symbols | Notes / sketchfab
+Violin / sketchfab
+Angel / sketchfab
+Broad Celtic Sword / sketchfab
 
 Animation
-Adobe Mixamo
+Player Attack / Adobe Mixamo
+Player PowerAttack / Adobe Mixamo
+Player Idle / Adobe Mixamo
+Player CrouWalk / Adobe Mixamo
+Player Walk / Adobe Mixamo
+Player Run / Adobe Mixamo
+Player HardRun / Adobe Mixamo
 
 SkyBox
 FreeNightSky / AssetStore
@@ -29,6 +46,7 @@ Shader
 Unity Technologies Particle Pack / AssetStore
 
 Texture / UI
+나름 쓸만할지도 모르는 마법진 / Pinterest
 Title Scene / 자체제작
 Title Highligh / 자체제작
 Quest UI Resource / 자체제작

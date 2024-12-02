@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -35,9 +36,11 @@ public class SettingsManager : MonoBehaviour
     private Dropdown quality;
     [SerializeField]
     private Dropdown fps;
+    [SerializeField]
+    private TextMeshProUGUI nickname;
     #endregion
 
-    void Start()
+    public void Start()
     {
         if (PlayerPrefs.GetInt("FirstBoot") != 1)
         {
@@ -139,6 +142,8 @@ public class SettingsManager : MonoBehaviour
 
     public void SetLeaveData()
     {
+        PlayerPrefs.SetInt("FirstBoot", 1);
+
         PlayerPrefs.SetFloat("MasterVol", masterVol.value);
         PlayerPrefs.SetFloat("MusicVol", musicVol.value);
         PlayerPrefs.SetFloat("SFXVol", sfxVol.value);
@@ -148,6 +153,9 @@ public class SettingsManager : MonoBehaviour
 
         PlayerPrefs.SetInt("Quality", quality.value);
         PlayerPrefs.SetInt("FPS", fps.value);
+
+        PlayerPrefs.SetString("NickName", nickname.text);
+        Debug.Log(PlayerPrefs.GetString("NickName"));
         viewer.SetActive(false);
     }
 }

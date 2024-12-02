@@ -35,7 +35,7 @@ public class CutSceneStart : MonoBehaviour
             isStartCutScene = true;
             chat.SetActive(true);
             chatText.DOText("What's wrong?", 1);
-            fireMove.transform.DOMoveX(-75, 16f).SetEase(Ease.InQuart);
+            
             StartCoroutine(Co_ToNextScene());
             
         }
@@ -48,7 +48,8 @@ public class CutSceneStart : MonoBehaviour
         cutSceneCamera.SetActive(true);
         mainCamera.SetActive(false);
         
-        yield return new WaitForSeconds(6.5f);
+        yield return new WaitForSeconds(12f);
+        fireMove.transform.DOMoveX(-75, 16f).SetEase(Ease.InQuart);
         cutSceneCamera.SetActive(false);
         mainCamera.SetActive(true);
         mainAudio.clip = fastBgm;

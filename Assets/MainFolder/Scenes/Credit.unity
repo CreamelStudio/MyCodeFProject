@@ -180,27 +180,35 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Map\n\n\n\nViking Village / AssetStore\r\n\nPBR Little Games Pack - 4K
-    / AssetStore\r\n\r\n\n\nMusic\r\n\n\n\nFree Fantasy Adventure Music Pack / AssetStore\r\n\nNature
-    - Essentials / AssetStore\r\n\nRain Forest SFX / AssetStore\r\n\nBase Drum Impact
-    / https://www.youtube.com/watch?v=s-H0RlBc46U\r\n\n75_\uB204\uB77D\uB41C \uCD1D\uC54C
-    / \uACF5\uC720\uB9C8\uB2F9\r\n\nE0153_Sorrow_Sleep alone_Piano Violin_T55 / \uACF5\uC720\uB9C8\uB2F9\r\n\nGreen
-    Sleeves[\uC815\uC778\uC601] / \uACF5\uC720\uB9C8\uB2F9\r\n\nSE_08_04_\uC559\uCE7C\uC9C4
+  m_text: "Map\r\n\n\nViking Village / AssetStore\r\n\nPBR Little Games Pack - 4K
+    / AssetStore\r\n\nDungeon Castle 3D Asset / CGtrader\r\n\r\n\nVFX\r\n\n\nLightning
+    Bolt Effect for Unity / AssetStore\r\n\r\nMusic\r\n\n\nFree Fantasy Adventure
+    Music Pack / AssetStore\r\n\nNature - Essentials / AssetStore\r\n\nRain Forest
+    SFX / AssetStore\r\n\nBase Drum Impact / https://www.youtube.com/watch?v=s-H0RlBc46U\r\n\n75_\uB204\uB77D\uB41C
+    \uCD1D\uC54C / \uACF5\uC720\uB9C8\uB2F9\r\n\nE0153_Sorrow_Sleep alone_Piano Violin_T55
+    / \uACF5\uC720\uB9C8\uB2F9\r\n\nGreen Sleeves[\uC815\uC778\uC601] / \uACF5\uC720\uB9C8\uB2F9\r\n\nSE_08_04_\uC559\uCE7C\uC9C4
     \uBC14\uC774\uC62C\uB9B0 \uD6A8\uACFC\uC74C / \uACF5\uC720\uB9C8\uB2F9\r\n\n\uAC15\uC9C0\uD76C_Uncharted
     / \uACF5\uC720\uB9C8\uB2F9\r\n\n\uC624\uB298 \uB09C \uB108\uC5D0\uAC8C / \uACF5\uC720\uB9C8\uB2F9\r\n\n\uC774\uD638\uC11D_Longing(\uADF8\uB9AC\uC6C0)
-    / \uACF5\uC720\uB9C8\uB2F9\n\n\uD64D\uBE48_\uB9C9\uC7A5\uB4DC\uB77C\uB9C8 / \uACF5\uC720\uB9C8\uB2F9\r\n\nDanse
-    des adolescentes / KBS \uC624\uCF00\uC2A4\uD2B8\uB77C \uC545\uB2E8\r\n\nLSMBG0602_\uAE34\uBC15\uD55C
-    \uC21C\uAC04\r\n\nStrong Wind Sound Effect | Royalty Free Sound Effects / Youtube\r\n\r\n\n\nAnimation\r\n\n\n\nAdobe
-    Mixamo\r\n\r\n\n\nSkyBox\r\n\n\n\nFreeNightSky / AssetStore\r\n\r\n\n\nShader\r\n\n\n\nUnity
-    Technologies Particle Pack / AssetStore\r\n\r\n\n\nTexture / UI\r\n\n\n\nTitle
-    Scene / \uC790\uCCB4\uC81C\uC791\r\n\nTitle Highligh / \uC790\uCCB4\uC81C\uC791\r\n\nQuest
-    UI Resource / \uC790\uCCB4\uC81C\uC791\r\n\r\n\n\n\n\n\n\nhttps://kenney.nl/assets
+    / \uACF5\uC720\uB9C8\uB2F9\r\n\n\uD64D\uBE48_\uB9C9\uC7A5\uB4DC\uB77C\uB9C8 /
+    \uACF5\uC720\uB9C8\uB2F9\r\n\nDanse des adolescentes / KBS \uC624\uCF00\uC2A4\uD2B8\uB77C
+    \uC545\uB2E8\r\n\nLSMBG0602_\uAE34\uBC15\uD55C \uC21C\uAC04\r\n\nStrong Wind
+    Sound Effect | Royalty Free Sound Effects / Youtube\r\n\nwrong-place-129242 /
+    pixabay\r\n\r\n\n3D Objects\r\n\n\nMusical Symbols | Notes / sketchfab\r\n\nViolin
+    / sketchfab\r\n\nAngel / sketchfab\r\n\nBroad Celtic Sword / sketchfab\r\n\r\n\nAnimation\r\n\n\nPlayer
+    Attack / Adobe Mixamo\r\n\nPlayer PowerAttack / Adobe Mixamo\r\n\nPlayer Idle
+    / Adobe Mixamo\r\n\nPlayer CrouWalk / Adobe Mixamo\r\n\nPlayer Walk / Adobe Mixamo\r\n\nPlayer
+    Run / Adobe Mixamo\r\n\nPlayer HardRun / Adobe Mixamo\r\n\r\n\nSkyBox\r\n\n\nFreeNightSky
+    / AssetStore\r\n\r\n\nShader\r\n\n\nUnity Technologies Particle Pack / AssetStore\r\n\r\nTexture
+    / UI\r\n\n\n\uB098\uB984 \uC4F8\uB9CC\uD560\uC9C0\uB3C4 \uBAA8\uB974\uB294 \uB9C8\uBC95\uC9C4
+    / Pinterest\r\n\nTitle Scene / \uC790\uCCB4\uC81C\uC791\r\n\nTitle Highligh /
+    \uC790\uCCB4\uC81C\uC791\r\n\nQuest UI Resource / \uC790\uCCB4\uC81C\uC791\r\n\r\n\nhttps://kenney.nl/assets
     \r\nhttps://sketchfab.com/feed\r\nhttps://assetstore.unity.com/ko-KR\r\nhttps://www.mixamo.com/#/\r\nhttps://gongu.copyright.or.kr/gongu/main/main.do\r\nhttps://adobe.com/"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 325471719a3ce1742b9b14fceb18d699, type: 2}
   m_sharedMaterial: {fileID: -5482165866986660059, guid: 325471719a3ce1742b9b14fceb18d699,
     type: 2}
-  m_fontSharedMaterials: []
+  m_fontSharedMaterials:
+  - {fileID: -5482165866986660059, guid: 325471719a3ce1742b9b14fceb18d699, type: 2}
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
@@ -415,12 +423,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

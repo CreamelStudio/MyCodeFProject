@@ -77,7 +77,13 @@ public class Player : MonoBehaviour
     {
         float v = Input.GetAxisRaw("Vertical");
         float h = Input.GetAxisRaw("Horizontal");
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (isToDown)
+        {
+            Vector3 moveDir = (transform.forward * v + transform.right * h).normalized * playerMoveSpeed;
+            moveDir.y = -28.9f;
+            playerRb.velocity = moveDir;
+        }
+        else if (Input.GetKey(KeyCode.LeftShift))
         {
             Vector3 moveDir = (transform.forward * v + transform.right * h).normalized * playerRunSpeed;
             playerRb.velocity = moveDir;
@@ -87,12 +93,7 @@ public class Player : MonoBehaviour
             Vector3 moveDir = (transform.forward * v + transform.right * h).normalized * playerMoveSpeed;
             playerRb.velocity = moveDir;
         }
-        else if (isToDown)
-        {
-            Vector3 moveDir = (transform.forward * v + transform.right * h).normalized * playerMoveSpeed;
-            moveDir.y = -28.9f;
-            playerRb.velocity = moveDir;
-        }
+        
         
     }
 

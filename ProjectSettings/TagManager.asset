@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - CutScene
+  - Blade
+  - Hand
+  - MagicHand
   layers:
   - Default
   - TransparentFX

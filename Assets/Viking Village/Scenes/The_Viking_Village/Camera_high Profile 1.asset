@@ -15,7 +15,7 @@ MonoBehaviour:
   active: 1
   postExposure:
     m_OverrideState: 1
-    m_Value: -1.99
+    m_Value: -0.79
   contrast:
     m_OverrideState: 1
     m_Value: 12
@@ -43,7 +43,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.255
+    m_Value: 0.122
 --- !u!114 &-6721687741527588655
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -262,7 +262,7 @@ MonoBehaviour:
   active: 1
   distance:
     m_OverrideState: 1
-    m_Value: 0.429
+    m_Value: 0.041
   cropToFit:
     m_OverrideState: 1
     m_Value: 1
@@ -287,7 +287,7 @@ MonoBehaviour:
     m_Value: 6.99
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 27.8
   scatter:
     m_OverrideState: 0
     m_Value: 0

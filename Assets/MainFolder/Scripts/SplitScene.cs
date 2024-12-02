@@ -6,13 +6,18 @@ using UnityEngine.SceneManagement;
 public class SplitScene : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField]
+    private GameObject turnObj;
+    [SerializeField]
+    private float turnSpeed;
 
-    public GameObject turnObj;
-    public float turnSpeed;
+    private AsyncOperation asyncOper;
 
     void Start()
     {
-        Invoke("nextScene",1f);
+        asyncOper = SceneManager.LoadSceneAsync("TitleScene");
+        asyncOper.allowSceneActivation = false;
+        Invoke("nextScene",2.5f);
     }
 
     private void Update()
@@ -22,6 +27,6 @@ public class SplitScene : MonoBehaviour
 
     public void nextScene()
     {
-        SceneManager.LoadSceneAsync("TitleScene");
+        asyncOper.allowSceneActivation = true;
     }
 }
