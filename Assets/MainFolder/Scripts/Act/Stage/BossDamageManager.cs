@@ -33,6 +33,12 @@ public class BossDamageManager : MonoBehaviour
             audioSource.DOFade(0, 0.5f);
             Invoke("ToCredit", 3f);
         }
+
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            bossHP -= 50;
+            DOTween.To(() => bossHPBar.value, x => bossHPBar.value = x, bossHP, 0.3f);
+        }
     }
 
     private void OnTriggerEnter(Collider other)

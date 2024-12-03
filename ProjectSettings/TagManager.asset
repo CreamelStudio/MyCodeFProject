@@ -8,6 +8,7 @@ TagManager:
   - Blade
   - Hand
   - MagicHand
+  - Fire
   layers:
   - Default
   - TransparentFX
