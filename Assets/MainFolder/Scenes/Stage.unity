@@ -4088,7 +4088,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 119.64978, y: -31.299988}
+  m_AnchoredPosition: {x: 119.6499, y: -31.300049}
   m_SizeDelta: {x: 239.29956, y: 42.2719}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &264604420
@@ -9461,7 +9461,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 312.1715, y: -58.799988}
+  m_AnchoredPosition: {x: 312.1714, y: -58.80005}
   m_SizeDelta: {x: 694.0861, y: 41.3032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &644138936
@@ -28328,7 +28328,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.08e-43, y: 1.39e-43, z: 0, w: 4.475918e+29}
+  m_BoundingSphereOverride: {x: 9.1835e-41, y: 0, z: 0, w: 2.367e-42}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -30832,7 +30832,7 @@ MonoBehaviour:
   maxPlayerHp: 30
   playerHp: 0
   handDamage: 3
-  magicHandDamage: 1.5
+  magicHandDamage: 2
   isDead: {fileID: 932763290}
   bgm: {fileID: 221209956}
   dead: {fileID: 8300000, guid: 106e1a61e8633724a91f92b08329142c, type: 3}

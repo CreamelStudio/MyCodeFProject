@@ -24,10 +24,10 @@ public class HandMagic : MonoBehaviour
 
     IEnumerator Co_HandToOut()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.7f);
         DOTween.To(() => turnSpeed, x => turnSpeed = x, 0, 0.5f);
         handOne.SetActive(true);
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(1f);
         for (int i = 0; i < handGroup.Length; i++)
         {
             handGroup[i].SetActive(true);

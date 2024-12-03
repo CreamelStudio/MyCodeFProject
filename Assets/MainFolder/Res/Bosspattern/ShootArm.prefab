@@ -796,7 +796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startOffset: 0.5
   player: {fileID: 0}
-  moveSpeed: 60
+  moveSpeed: 90
   offsetPlayer: {x: 0, y: 2, z: 0}
 --- !u!1 &1247199672081844885
 GameObject:
@@ -1439,7 +1439,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startOffset: 2
   player: {fileID: 0}
-  moveSpeed: 60
+  moveSpeed: 90
   offsetPlayer: {x: 0, y: 2, z: 0}
 --- !u!1 &2155285101443164718
 GameObject:
@@ -2856,7 +2856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startOffset: 1.5
   player: {fileID: 0}
-  moveSpeed: 60
+  moveSpeed: 90
   offsetPlayer: {x: 0, y: 2, z: 0}
 --- !u!1 &3315175359502130154
 GameObject:
@@ -5577,7 +5577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startOffset: 1
   player: {fileID: 0}
-  moveSpeed: 60
+  moveSpeed: 90
   offsetPlayer: {x: 0, y: 2, z: 0}
 --- !u!1 &6977347091680797557
 GameObject:
